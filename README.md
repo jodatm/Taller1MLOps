@@ -50,17 +50,17 @@ Nos pedian hacer una prueba sencilla con un docker
 ## Comandos
 
 ```bash
-# 1. Clonar el proyecto (si es necesario)
-git clone https://github.com/tuusuario/predictor_app.git
+# 1. Clonar el proyecto
+git clone git@github.com:jodatm/Taller1MLOps.git
 cd predictor_app
 
-# 2. Construir la imagen Docker
+# 2. Construir la imagen
 docker build -t predictor-app .
 
-# 3. Ejecutar el contenedor en el puerto 5000
+# 3. Ejecutar el contenedor en el puerto 5000 (segun las indicaciones)
 docker run -p 5000:5000 predictor-app
 
-# 4. En otra terminal: Probar la API con un POST usando curl
+# 4. Probar la API
 
 # Ejemplo: caso crónico
 curl -X POST http://localhost:5000/predecir \
@@ -72,6 +72,6 @@ curl -X POST http://localhost:5000/predecir \
 ![Postman](postman.png)
 
 ```bash
-# 5. Detener el contenedor (buscar ID con docker ps)
+# 5. Detener el contenedor
 docker ps
 docker stop <container_id>
